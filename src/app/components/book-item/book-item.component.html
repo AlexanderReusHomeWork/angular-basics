@@ -1,0 +1,26 @@
+<div [ngClass]="isDisplayed ? 'book-item' : 'none'">
+  <div class="book-item-background" (click)="removeModal()">
+    <div class="book-item-background-window">
+      <div class="book-item-background-window-img">
+        <img src="{{ bookItem.image }}" alt="{{ bookItem.title }}" />
+      </div>
+      <div class="book-item-background-window-descr">
+        <h2>{{ bookItem.title | uppercase }}</h2>
+        <p class="author">
+          Author:<span>{{ bookItem.author }}</span>
+        </p>
+        <div [ngSwitch]="bookItem.summary.length > 660">
+          <p *ngSwitchCase="false">{{ bookItem.summary }}</p>
+          <p *ngSwitchCase="true" style="height: 200px; overflow: hidden">
+            {{ bookItem.summary }}
+          </p>
+        </div>
+        <span class="price">
+          {{ bookItem.price.value | eurToLei }}
+          {{ bookItem.price.currency | eurToLei }}
+        </span>
+        <span class="isnb">ISBN: {{ bookItem.ISBN }}</span>
+      </div>
+    </div>
+  </div>
+</div>

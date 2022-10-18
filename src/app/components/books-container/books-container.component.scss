@@ -1,0 +1,20 @@
+.books-container {
+  margin: 30px auto;
+  max-width: 900px;
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    li {
+      list-style-type: none;
+      transition: all 1s linear;
+      cursor: pointer;
+      img {
+        width: 250px;
+      }
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}

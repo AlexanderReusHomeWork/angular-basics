@@ -1,0 +1,13 @@
+<main class="books-container">
+  <ul>
+    <li
+      (click)="getBookInfo(item)"
+      *ngFor="let item of booksArr; let i = index"
+    >
+      <img appScale src="{{ item.image }}" alt="{{ item.title }}" />
+      <h2 [ngStyle]="{ color: i % 2 === 0 ? '#817979' : '#3f2c2f' }">
+        {{ item.title }}
+      </h2>
+    </li>
+  </ul>
+</main>

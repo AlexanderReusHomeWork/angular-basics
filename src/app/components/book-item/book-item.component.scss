@@ -1,0 +1,63 @@
+.book-item {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  height: 100%;
+  top: 0px;
+
+  &-background {
+    position: relative;
+    background-color: rgba(244, 244, 244, 0.516);
+    backdrop-filter: blur(8px);
+    width: inherit;
+    height: inherit;
+    &-window {
+      display: flex;
+      position: absolute;
+      right: 8%;
+      top: 22%;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      height: 60%;
+      background-color: #fff;
+      &-img {
+        width: 250px;
+        img {
+          width: inherit;
+        }
+      }
+      &-descr {
+        margin-left: 40px;
+        position: relative;
+        h2 {
+          margin-bottom: 5px;
+          font-size: 2rem;
+        }
+        .author {
+          margin-bottom: 20px;
+          span {
+            color: #252323;
+            font-weight: 700;
+          }
+        }
+        .price {
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+          font-size: 2rem;
+        }
+        .isnb {
+          position: absolute;
+          top: -10px;
+          right: -5px;
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+.none {
+  display: none;
+}
